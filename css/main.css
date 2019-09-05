@@ -1056,8 +1056,8 @@ p {
 }
 
 .reviews__item {
-  min-height: 405px;
-  max-height: 405px;
+  min-height: 410px;
+  max-height: 410px;
   margin: 0 15px;
   border: 1px solid #eddfd4;
   border-radius: 8px;
@@ -1077,6 +1077,10 @@ p {
   text-align: center;
 }
 
+.reviews__title {
+  min-height: 48px;
+}
+
 .review__text-wrapper {
   padding: 0 20px;
 }
@@ -1091,6 +1095,7 @@ p {
 .reviews__text_expand {
   max-height: none;
 }
+
 .reviews__item_expand {
   max-height: none;
   padding-bottom: 20px;
@@ -1195,6 +1200,18 @@ p {
 }
 
 @media screen and (max-width: 479px) {
+  .reviews__title {
+    min-height: 72px;
+  }
+
+  .reviews__text {
+    max-height: 65px;
+  }
+
+  .reviews__text_expand {
+    max-height: none;
+  }
+
   .reviews .slick-prev {
     left: 24px;
     top: 40px;
