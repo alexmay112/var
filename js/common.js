@@ -96,7 +96,9 @@ $('.fix__btn').click(function (e) {
 });
 
 $(document).ready(function () {
-  $('.consequences__list').slick({});
+  $('.consequences__list').slick({
+    adaptiveHeight: true
+  });
   $('.reviews__list').slick({});
 
   $('.reviews__more').on('click', function (e) {
