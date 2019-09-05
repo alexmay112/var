@@ -95,20 +95,26 @@ $('.fix__btn').click(function (e) {
   e.preventDefault();
 });
 
-$(document).ready(function(){
-  $('.consequences__list').slick({
-  });
-  $('.reviews__list').slick({
-  });
+$(document).ready(function () {
+  $('.consequences__list').slick({});
+  $('.reviews__list').slick({});
 
   $('.reviews__more').on('click', function (e) {
     e.preventDefault();
+    $(this).parents('.reviews__item').toggleClass('reviews__item_expand');
     $(this).siblings('.review__text-wrapper').children('.reviews__text').toggleClass('reviews__text_expand');
     $(this).toggleClass('reviews__more_active')
   })
   $('.reviews__list').on('swipe', function (event, slick, direction) {
     console.log(direction);
+    $('.reviews__item').removeClass('reviews__item_expand');
     $('.reviews__text').removeClass('reviews__text_expand');
     $('.reviews__more').removeClass('reviews__more_active');
   })
-}); 
+  $('.slick-arrow').on('click', function (e) {
+    $('.reviews__item').removeClass('reviews__item_expand');
+    $('.reviews__text').removeClass('reviews__text_expand');
+    $('.reviews__more').removeClass('reviews__more_active');
+  })
+
+});
