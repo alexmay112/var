@@ -1113,7 +1113,7 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 115px;
+  max-width: 100px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -1128,7 +1128,7 @@ p {
 
 .use__img img {
   margin: 0;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   position: relative;
   z-index: -1;
 }
@@ -1150,7 +1150,7 @@ p {
   }
 
   .use .pack {
-    max-width: 77px;
+    max-width: 68px;
   }
 }
 
