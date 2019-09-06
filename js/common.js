@@ -71,30 +71,31 @@ $(function () {
 
 $(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();
+  $('.menu').hide(); // close menu
   $('html, body').animate({
     scrollTop: $($.attr(this, 'href')).offset().top - 29
   }, 1000);
 });
 
 
-$('.fix__btn').click(function (e) {
-  var $message1 = $('.menu');
+// $('.fix__btn').click(function (e) {
+//   var $message1 = $('.menu');
 
-  if ($message1.css('display') != 'block') {
-    $message1.show();
-    var firstClick = true;
-    $(document).bind('click.myEvent', function (e) {
-      if (!firstClick && $(e.target).closest('.menu').length == 0) {
-        $message1.hide();
-        $(document).unbind('click.myEvent');
-      }
-      firstClick = false;
-    });
-  }
+//   if ($message1.css('display') != 'block') {
+//     $message1.show();
+//     var firstClick = true;
+//     $(document).bind('click.myEvent', function (e) {
+//       if (!firstClick && $(e.target).closest('.menu').length == 0) {
+//         $message1.hide();
+//         $(document).unbind('click.myEvent');
+//       }
+//       firstClick = false;
+//     });
+//   }
 
-  e.preventDefault();
-});
-
+//   e.preventDefault();
+// });
+/*=========================================*/
 $(document).ready(function () {
   $('.consequences__list').slick({
     adaptiveHeight: true
@@ -118,5 +119,21 @@ $(document).ready(function () {
     $('.reviews__text').removeClass('reviews__text_expand');
     $('.reviews__more').removeClass('reviews__more_active');
   })
+
+  $(".ever-popup-btn").click(function () {
+    $('.menu').hide();
+  });
+
+
+  $('.fix__btn').click(function (e) {
+    let message1 = $('.menu');
+    if (message1.css('display') !== 'block') {
+      message1.show();
+    } else {
+      message1.hide();
+    }
+    e.preventDefault();
+  });
+
 
 });
